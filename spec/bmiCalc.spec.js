@@ -1,7 +1,6 @@
-const bmiCalc = require('..src/js.bmiCalc')
+const bmiCalc = require('../src/js/bmiCalc.js')
 
-subject = new bmiCalc ();
-
+subject = new bmiCalc();
 
 describe ('bmiCalc',() => {
     describe ('#calculateMetric',() => { 
@@ -12,7 +11,7 @@ describe ('bmiCalc',() => {
             let results 
 
             beforeEach (() => {
-                results = subject.calculateMetric({ height: 2.00, weight: 50})
+                results = subject.calculateMetric({ height: 2.00, weight: 100})
             })
 
         it('Expecting a two decimal place return float given proper arguments',() => {
@@ -54,7 +53,7 @@ describe ('bmiCalc',() => {
             })
 
         it('Expecting a two decimal place return float given proper arguments',() => {
-            expect(results.value).toEqual(17.25)
+            expect(results.value).toEqual(17.24)
 
             })
 

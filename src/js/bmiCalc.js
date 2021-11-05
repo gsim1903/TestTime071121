@@ -2,7 +2,7 @@ class bmiCalc {
     calculateMetric (options) {
         const weight = options.weight
         const height = options.height
-        const bmiValue =  (weight * 1.3)/(Math.pow(height, 2.5)).toFixed(2)
+        const bmiValue = (weight*1.3/ Math.pow(height, 2.5)). toFixed(2)
         const bmiResults = {
             value: parseFloat(bmiValue),
             classifcation: this.getbmiClassifcation(parseFloat(bmiValue))
@@ -28,7 +28,9 @@ class bmiCalc {
         }
 
         else 
-            return 'Extreme obesity Class 3'
+            return 'Extreme Obesity'
     }
-
 }
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = bmiCalc
+  }
